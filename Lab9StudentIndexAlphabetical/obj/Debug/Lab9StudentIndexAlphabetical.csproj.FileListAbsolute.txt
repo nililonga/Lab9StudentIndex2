@@ -1,0 +1,7 @@
+c:\users\noeil\source\repos\Lab9StudentIndexAlphabetical\Lab9StudentIndexAlphabetical\bin\Debug\Lab9StudentIndexAlphabetical.exe.config
+c:\users\noeil\source\repos\Lab9StudentIndexAlphabetical\Lab9StudentIndexAlphabetical\bin\Debug\Lab9StudentIndexAlphabetical.exe
+c:\users\noeil\source\repos\Lab9StudentIndexAlphabetical\Lab9StudentIndexAlphabetical\bin\Debug\Lab9StudentIndexAlphabetical.pdb
+c:\users\noeil\source\repos\Lab9StudentIndexAlphabetical\Lab9StudentIndexAlphabetical\obj\Debug\Lab9StudentIndexAlphabetical.csprojResolveAssemblyReference.cache
+c:\users\noeil\source\repos\Lab9StudentIndexAlphabetical\Lab9StudentIndexAlphabetical\obj\Debug\Lab9StudentIndexAlphabetical.csproj.CoreCompileInputs.cache
+c:\users\noeil\source\repos\Lab9StudentIndexAlphabetical\Lab9StudentIndexAlphabetical\obj\Debug\Lab9StudentIndexAlphabetical.exe
+c:\users\noeil\source\repos\Lab9StudentIndexAlphabetical\Lab9StudentIndexAlphabetical\obj\Debug\Lab9StudentIndexAlphabetical.pdb
