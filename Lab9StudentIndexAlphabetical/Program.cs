@@ -9,11 +9,12 @@ namespace Lab9StudentIndexAlphabetical
 {
     class Program
     {
-        public static ArrayList Names = new ArrayList();
-        public static ArrayList Numbers = new ArrayList();
-        public static ArrayList Hometown = new ArrayList();
-        public static ArrayList Food = new ArrayList();
-        public static void ArrayBuilder()
+        public static List<string> Names = new List<string>();
+        public static List<string> Numbers = new List<string>();
+        public static List<string> Hometown = new List<string>();
+        public static List<string> Food = new List<string>();
+        public static List<string> Color = new List<string>();
+        public static void ListBuilder()
         {
             Names.Add("Abby");
             Names.Add("Bobby");
@@ -35,41 +36,61 @@ namespace Lab9StudentIndexAlphabetical
             Food.Add("Carrots");
             Food.Add("Grapes");
             Food.Add("Pears");
+            Color.Add("blue");
+            Color.Add("red");
+            Color.Add("yellow");
+            Color.Add("green");
+            Color.Add("gray");
+
         }
 
         static void Main(string[] args)
         {
-            
-            ArrayBuilder();
+
+            ListBuilder();
             Console.WriteLine("would you like to know more about a student or enter information?");
             Console.WriteLine("Enter: M for More or E for Enter");
             string input = Console.ReadLine().ToUpper();
 
-            if (input == "M")
+            while (input == "M")
             {
                 string input5;
-                do
+
                 {
                     Console.WriteLine("which student would you like to know about (1-5)?");
                     string input2 = (Console.ReadLine());
+                    //int id = 0;
 
-                    //shift users input so it's 0-4 and not 1-5
-                    int index;
-                    //int index2;
-                    //int index3;
-                    int.TryParse(input2, out index);
-                    //int.TryParse(Hometown, out index2);
-                    //int.TryParse(Food, out index3);
-                    index--;
-                    Console.WriteLine("Name: " + (Names[index]));
-                    Console.WriteLine("Hometown: " + (Hometown[index]));
-                    Console.WriteLine("Favorite Food: " + (Food[index]));
-                    Console.WriteLine();
-                    Console.WriteLine("Would you like information about another student? (Y/N): ");
-                    input5 = Console.ReadLine().ToUpper();
-                } while (input5 == "Y");
+                   /* while (!int.TryParse(Console.ReadLine(), out id))
+                    {
+                        Console.WriteLine("your input was not valid, try again");
+                        Console.ReadLine();
+                        continue;
+                    }*/
+                        //shift users input so it's 0-4 and not 1-5
+                        int index;
+                        //int index2;
+                        //int index3;
+                        int.TryParse(input2, out index);
+                        //int.TryParse(Hometown, out index2);
+                        //int.TryParse(Food, out index3);
+                        index--;
+                        Console.WriteLine("Name: " + (Names[index]));
+                        Console.WriteLine("Hometown: " + (Hometown[index]));
+                        Console.WriteLine("Favorite Food: " + (Food[index]));
+                        Console.WriteLine("Favorite Color: " + (Color[index]));
+                        Console.WriteLine();
+                        Console.WriteLine("Would you like information about another student? (Y/N): ");
+                        input5 = Console.ReadLine().ToUpper();
+
+                        if (input5 != "Y")
+                            
+                    {
+                        break;
+                    }
+                }
             }
-            else
+            while (input == "E")
             {
                 string input4;
                 do
@@ -80,14 +101,26 @@ namespace Lab9StudentIndexAlphabetical
 
                     Console.WriteLine("Would you like to enter another name? (Y/N)");
                     input4 = Console.ReadLine().ToUpper();
+                if (input4 != "Y")
+                    {
+                        for (int i = 0; i < Names.Count; i++)
+                        {
+                            Names.Sort(); Console.WriteLine(Names[i]);
+                        }
+                        Console.WriteLine("have a great day!");
+                        Console.ReadLine();
+                        Environment.Exit(0);
+                    }
+                
                 } while (input4 == "Y");
-                    { for (int i = 0; i < Names.Count; i++)
-                {
-                    Names.Sort(); Console.WriteLine(Names[i]);
+                { for (int i = 0; i < Names.Count; i++)
+                    {
+                        Names.Sort(); Console.WriteLine(Names[i]);
+                    }
                 }
             }
-                }
-            }
+        }
+               
 
         }
     
