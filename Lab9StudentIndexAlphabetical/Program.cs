@@ -46,27 +46,42 @@ namespace Lab9StudentIndexAlphabetical
 
         static void Main(string[] args)
         {
+            string input;
+            
+                ListBuilder();
+                Console.WriteLine("would you like to know more about a student or enter information?");
+                Console.WriteLine("Enter: M for More or E for Enter");
+                input = Console.ReadLine().ToUpper();
+            while (input == "")
+            {
+                Console.WriteLine("Blank spaces are invalid, please enter a valid response");
+                input = (Console.ReadLine().ToUpper());
+            }
 
-            ListBuilder();
-            Console.WriteLine("would you like to know more about a student or enter information?");
-            Console.WriteLine("Enter: M for More or E for Enter");
-            string input = Console.ReadLine().ToUpper();
-
-            while (input == "M")
+            while (input == "M")  
             {
                 string input5;
 
                 {
-                    Console.WriteLine("which student would you like to know about (1-5)?");
-                    string input2 = (Console.ReadLine());
+                    
+                  
+                        Console.WriteLine("which student would you like to know about (1-5)?");
+                        string input2 = (Console.ReadLine());
+                    while (input2 == "")
+                        {
+                        Console.WriteLine("Blank spaces are invalid, please enter a valid response");
+                        input2 = (Console.ReadLine());
+                    }
+                    
+                   
                     //int id = 0;
 
-                   /* while (!int.TryParse(Console.ReadLine(), out id))
-                    {
-                        Console.WriteLine("your input was not valid, try again");
-                        Console.ReadLine();
-                        continue;
-                    }*/
+                        /* while (!int.TryParse(Console.ReadLine(), out id))
+                         {
+                             Console.WriteLine("your input was not valid, try again");
+                             Console.ReadLine();
+                             continue;
+                         }*/
                         //shift users input so it's 0-4 and not 1-5
                         int index;
                         //int index2;
@@ -83,14 +98,14 @@ namespace Lab9StudentIndexAlphabetical
                         Console.WriteLine("Would you like information about another student? (Y/N): ");
                         input5 = Console.ReadLine().ToUpper();
 
-                        if (input5 != "Y")
+                        if (input5 != "Y" || input5 == "")
                             
                     {
                         break;
                     }
                 }
             }
-            while (input == "E")
+            while (input == "E" || input == "")
             {
                 string input4;
                 do
@@ -99,9 +114,21 @@ namespace Lab9StudentIndexAlphabetical
                     //takes user input and adds to arraylist
                     Names.Add(input3);
 
+                    while (input3 == "")
+                    {
+                        Console.WriteLine("Blank spaces are invalid, please enter a valid response");
+                        input3 = (Console.ReadLine());
+                        Names.Add(input3);
+                    }
                     Console.WriteLine("Would you like to enter another name? (Y/N)");
                     input4 = Console.ReadLine().ToUpper();
-                if (input4 != "Y")
+
+                    while (input4 == "")
+                    {
+                        Console.WriteLine("Blank spaces are invalid, please enter a valid response");
+                        input4 = (Console.ReadLine());
+                    }
+                if (input4 != "Y" || input4 == "")
                     {
                         for (int i = 0; i < Names.Count; i++)
                         {
@@ -112,7 +139,7 @@ namespace Lab9StudentIndexAlphabetical
                         Environment.Exit(0);
                     }
                 
-                } while (input4 == "Y");
+                } while (input4 == "Y" || input4 == "");
                 { for (int i = 0; i < Names.Count; i++)
                     {
                         Names.Sort(); Console.WriteLine(Names[i]);
